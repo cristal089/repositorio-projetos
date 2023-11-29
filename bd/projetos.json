@@ -1,0 +1,16 @@
+[
+    {
+        "disciplina": "XDES03",
+        "nome": "Site de receitas",
+        "descricao": "Site para encontrar e submeter receitas de todos os tipos",
+        "aluno": "Anna",
+        "nota": 10
+    },
+    {
+        "disciplina": "XDES03",
+        "nome": "Catálogo de filmes",
+        "descricao": "Site para encontrar e assistir filmes de todos os tipos",
+        "aluno": "Nina",
+        "nota": 9.5
+    }
+]

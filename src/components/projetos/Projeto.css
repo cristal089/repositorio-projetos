@@ -1,0 +1,19 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    min-width: 500px;
+    min-height: 100px;
+    margin: 2rem;
+
+    background-color: white;
+    color: black;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
