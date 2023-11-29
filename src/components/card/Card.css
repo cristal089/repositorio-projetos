@@ -1,0 +1,76 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+
+    min-width: 500px;
+    min-height: 100px;
+    margin: 2rem;
+    padding: 1rem 2rem;
+
+    background-color: #fff;
+    color: black;
+
+    border-radius: 6px;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    border: none;
+    -webkit-box-shadow: 0 1px 7px rgba(0,0,0,.05);
+    box-shadow: 0 1px 7px rgba(0,0,0,.05);
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+.subject {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #898e9c;
+
+    align-self: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: auto;
+}
+
+.title {
+    font-weight: 600;
+    color: #2b2e36;
+}
+
+.smallerText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #acacac;
+    align-self: flex-start;
+}
+
+.student {
+    color: #886cff;
+}
+
+.student:hover {
+    text-decoration: underline;
+    color: #f3f0ff;
+    cursor: pointer;
+}
+
+.review {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.25rem;
+
+    align-items: center;
+}
+
+.star {
+    color: #feba01;
+}

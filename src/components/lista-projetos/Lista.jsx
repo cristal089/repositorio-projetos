@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import Projeto from "../projetos/Projeto"
+import Card from "../card/Card"
 import axios from 'axios';
 import { useForm } from "react-hook-form";
 
@@ -34,11 +34,8 @@ export default function Lista() {
     }, []);
 
     return (
-        <div>
-            <h2>Clique para listar os projetos</h2>
-            <form onSubmit={handleSubmit(submit)} noValidate>
-                <button>Listar</button>
-            </form>
+        <div className="page-list">
+            <h2 className="page-title">Todos os projetos</h2>
             <BuscaProjeto formData={formData}/>
         </div>
     )
@@ -58,10 +55,10 @@ export function BuscaProjeto({formData}){
                 const dados = await axios.get(`${endPoint}`);
                 if(Array.isArray(dados.data)){
                     for(let projeto of dados.data){
-                        view.push(<Projeto projeto={projeto} />);
+                        view.push(<Card projeto={projeto} />);
                     }
                 }else{
-                    view.push(<Projeto projeto={dados.data} />);
+                    view.push(<Card projeto={dados.data} />);
                 }
                 setProjeto(view);
                 setMsg('');
