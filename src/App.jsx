@@ -5,12 +5,7 @@ function App() {
 
   return (
     <>
-      <section>
-        <header>
-            <h1>Bem vindo ao sistema de projetos da UNIFEI</h1>
-        </header>
-        <Outlet/>
-    </section>
+      <Outlet/>
     </>
   )
 }

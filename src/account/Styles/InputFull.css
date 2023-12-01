@@ -1,0 +1,62 @@
+.inputFull {
+    position: relative;
+    font-size: 1.3rem;
+    text-align: left;
+
+    & + .inputFull {
+        margin-top: 30px;
+    }
+}
+
+.inputFull input {
+    background-color: #fff;
+    font-size: inherit;
+    color: black;
+    position: relative;
+    padding: 12px 0px 5px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #e5e5e5;
+    transition: border-color 150ms ease-out;
+
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px #fff inset;
+        -webkit-text-fill-color: black;
+    }
+}
+
+.inputFull label {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #999;
+    background-color: transparent;
+    z-index: 10;
+    transition: transform 200ms ease-out, font-size 200ms ease-out;
+    cursor: text;
+}
+
+.inputFull:focus-within label {
+    transform: translateY(-125%);
+    font-size: .85rem;
+    cursor: default;
+}
+
+.inputFull .labelPreen {
+    transform: translateY(-125%);
+    font-size: .85rem;
+    cursor: default;
+}
+
+.inputFull .erro {
+    margin: 0px 3px;
+    font-size: 0.8rem;
+    color: red;
+}
+
+.inputFull box-icon {
+    position: absolute;
+    top: 4px;
+    left: 220px;
+}

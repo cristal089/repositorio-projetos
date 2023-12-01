@@ -1,0 +1,136 @@
+body {
+    margin: 0 auto;
+    background-color: #e1e8f0;
+}
+
+.container {
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    width: 768px;
+    max-width: 100%;
+    min-height: 650px;
+}
+
+.container form {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 600ms ease-in-out;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container .login {
+    right: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container .create {
+    right: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.painelAlternador {
+    background: linear-gradient(to right, #6565ff, #0000FF);
+    color: white;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    transition: all 600ms ease-in-out;
+    margin: 0;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.painelAlternador h2 {
+    font-size: 22px;
+}
+
+.painelAlternador p {
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.painelAlternador h1 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.painelAlternador hr {
+    width: 100%;
+}
+
+.direito {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.esquerdo {
+    left: 0;
+    z-index: 2;
+}
+
+.metade {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container.ativCreate .login {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.ativCreate .create {
+    transform: translateX(-100%);
+    opacity: 1;
+    z-index: 2;
+}
+
+.container.ativCreate .direito {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 2;
+}
+
+.container.ativCreate .esquerdo {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 1;
+}
+
+button {
+    padding: 15px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btnAlt {
+    margin-top: 30px;
+    background-color: white;
+    color: blue;
+
+    &:focus {
+        outline: none;
+        transform: scale(0.95);
+    }
+
+}
