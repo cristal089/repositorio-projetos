@@ -1,65 +1,20 @@
 [
-    {
-        "disciplina": "XDES03",
-        "nome": "Site de receitas",
-        "descricao": "Site para encontrar e submeter receitas de todos os tipos.",
-        "grupo": "Grupo 10",
-        "nota": 10
-    },
-    {
-        "disciplina": "XDES03",
-        "nome": "Catálogo de filmes",
-        "descricao": "Site para encontrar e assistir filmes de todos os gêneros.",
-        "grupo": "Grupo 7",
-        "nota": 9.5
-    },
-    {
-        "disciplina": "COM222",
-        "nome": "Mostruário de calçados",
-        "descricao": "Site para comprar sapatos.",
-        "grupo": "Grupo 1",
-        "nota": 7
-    },
-    {
-        "disciplina": "XDES03",
-        "nome": "Site de receitas",
-        "descricao": "Site para encontrar e submeter receitas de todos os tipos.",
-        "grupo": "Grupo 10",
-        "nota": 10
-    },
-    {
-        "disciplina": "XDES03",
-        "nome": "Catálogo de filmes",
-        "descricao": "Site para encontrar e assistir filmes de todos os gêneros.",
-        "grupo": "Grupo 7",
-        "nota": 9.5
-    },
-    {
-        "disciplina": "COM222",
-        "nome": "Mostruário de calçados",
-        "descricao": "Site para comprar sapatos.",
-        "grupo": "Grupo 1",
-        "nota": 7
-    },
-    {
-        "disciplina": "XDES03",
-        "nome": "Site de receitas",
-        "descricao": "Site para encontrar e submeter receitas de todos os tipos.",
-        "grupo": "Grupo 10",
-        "nota": 10
-    },
-    {
-        "disciplina": "XDES03",
-        "nome": "Catálogo de filmes",
-        "descricao": "Site para encontrar e assistir filmes de todos os gêneros.",
-        "grupo": "Grupo 7",
-        "nota": 9.5
-    },
-    {
-        "disciplina": "COM222",
-        "nome": "Mostruário de calçados",
-        "descricao": "Site para comprar sapatos.",
-        "grupo": "Grupo 1",
-        "nota": 7
-    }
+  {
+    "id": 1,
+    "repositorio": "www.github.com",
+    "grupo": "10",
+    "matriculas": 1234,
+    "resumo": "Site para encontrar e submeter receitas de todos os tipos.",
+    "periodo": "2023.2",
+    "disciplina": "XDES03"
+  },
+  {
+    "id": 2,
+    "repositorio": "https://github.com/teste",
+    "grupo": "3",
+    "matriculas": "123456",
+    "resumo": "Testando a criação de projeto",
+    "periodo": "2021.1",
+    "disciplina": "COM221.2"
+  }
 ]

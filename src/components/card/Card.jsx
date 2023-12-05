@@ -9,16 +9,16 @@ export default function Card({projeto}) {
             <span className='subject'>{projeto.disciplina}</span>
 
             <div className="info">
-                <span className='title'>{projeto.nome}</span>
+                <span className='title'>{projeto.repositorio}</span>
                 <div className='smallerText'>
-                    <span>{projeto.descricao}</span>
-                    <a className='student' href={`http://localhost:5173/${projeto.grupo}`}>{projeto.grupo}</a>
+                    <span>{projeto.resumo}</span>
+                    <a className='student' href={`http://localhost:5173/${projeto.grupo}`}>Grupo {projeto.grupo}</a>
                 </div>
             </div>
 
             <div className='review'>
                 <FontAwesomeIcon icon={faStar} className='star'></FontAwesomeIcon>
-                <span>{projeto.nota}</span>
+                <span>{projeto.periodo}</span>
             </div>
         </a>
     )

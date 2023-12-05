@@ -131,6 +131,32 @@ app.get('/:usuario', verificaToken, (req,res) => {
 
 });
 
+// Criação de projeto
+app.post("/projetos", async (req, res) => {
+    const {repositorio, grupo, matriculas, resumo, periodo, disciplina} = req.body;
+    const projectsPath = path.join(__dirname, '.', 'bd', 'projetos.json');
+    const projectsDB = JSON.parse(fs.readFileSync(projectsPath, {encoding: 'utf8', flag: "r"}));
+
+    // Gerar ID
+    const id = projectsDB.length + 1;
+
+    // Gerar novo User
+    const project = {
+        "id": id,
+        "repositorio": repositorio,
+        "grupo": grupo,
+        "matriculas": matriculas,
+        "resumo": resumo,
+        "periodo": periodo,
+        "disciplina": disciplina
+    }
+
+    // Salvar novo projeto no BD
+    projectsDB.push(project);
+    fs.writeFileSync(projectsPath, JSON.stringify(projectsDB, null, 2));
+    res.send(`Projeto criado com sucesso.`);
+});
+
 // Função Autenticadora
 function verificaToken(req, res, next) {
     const authHeaders = req.headers['authorization'];
