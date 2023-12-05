@@ -7,3 +7,20 @@
     font-size: 2rem;
     color: #2b2e36;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    min-width: 55%;
+    background-color: #fff;
+    border-radius: 12px;
+
+    padding: 0.45rem;
+}
+
+nav a {
+    color: #2b2e36;
+    padding: 0 1rem;
+}

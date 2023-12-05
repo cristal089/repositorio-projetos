@@ -1,0 +1,31 @@
+[
+    {
+        "nome": "AWS CodeCommit",
+        "regex": "https://git-codecommit\\..+\\.amazonaws\\.com/v1/repos/.+"
+    },
+    
+    {
+        "nome": "BitBucket",
+        "regex": "https://bitbucket\\.org/.+"
+    },
+
+    {
+        "nome": "GitHub",
+        "regex": "https://github\\.com/.+"
+    },
+
+    {
+        "nome": "GitLab",
+        "regex": "https://gitlab\\.com/.+"
+    },
+
+    {
+        "nome": "Microsoft Azure Repos",
+        "regex": "https://dev\\.azure\\.com/.+"
+    },
+
+    {
+        "nome": "SourceForge",
+        "regex": "https://sourceforge\\.net/projects/.+"
+    }
+]

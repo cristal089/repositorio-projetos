@@ -47,7 +47,8 @@ export default function Lista() {
     return (
         <>
             <nav>
-                
+                <a href="http://localhost:5173/formulario">Cadastrar projeto</a>
+                <a href="http://localhost:5173/">Minha conta</a>
             </nav>
 
             <div className="page-list">

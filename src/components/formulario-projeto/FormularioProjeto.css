@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+*{
+  font-family: 'Comfortaa', sans-serif;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+#feedback {
+    color: white;
+    background-color: #e74c3c;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#fundo-form {
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    padding: 20px;
+    color: black;
+}
+  
+#fundo-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+  
+#fundo-form input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: black solid 1px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#fundo-form input:focus {
+    outline: none;
+    box-shadow: 0 0 30px rgb(140,127,212);
+}
+
+#fundo-form select:focus{
+    outline: none;
+    box-shadow: 0 0 30px rgb(140,127,212);
+}
+
+#fundo-form select {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: black solid 1px;
+    border-radius: 15px;
+    text-align: center;
+}
+  
+#fundo-form h3 {
+    margin-top: 20px;
+}
+  
+#fundo-form button {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    background-color: rgb(153,144,202);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+  
+#fundo-form button:hover {
+    background-color: rgb(140,127,212);
+}
+
+  

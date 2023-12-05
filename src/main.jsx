@@ -10,7 +10,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import TelaAcc from './account/TelaAcc.jsx';
 import Lista from "./components/lista-projetos/Lista.jsx";
 import Dashboard from './components/dashboard-usuario/Dashboard.jsx';
-
+import FormularioProjeto from './components/formulario-projeto/FormularioProjeto.jsx';
 
 //Adicionando as rotas
 const router = createBrowserRouter([
@@ -29,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: ':grupo',
     element: <Dashboard />
+  },
+  {
+    path: '/formulario',
+    element: <FormularioProjeto />
   }
 ]);
 
