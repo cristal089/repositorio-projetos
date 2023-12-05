@@ -8,6 +8,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 //Importando rotas
 import Lista from "./components/lista-projetos/Lista.jsx"
+import FormularioProjeto from './components/formulario-projeto/FormularioProjeto.jsx';
 
 //Adicionando as rotas
 const router = createBrowserRouter([

@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "sigla": "CCO016",
+        "ementa": "Fundamentos de Programação",
+        "carga_horaria": "(64h)",
+        "full_name": "CCO016 - Fundamentos de Programação (64h)"
+    },
+
+    {
+        "id": 2,
+        "sigla": "COM221.1",
+        "ementa": "Computação Orientada a Objetos II",
+        "carga_horaria": "(32h)",
+        "full_name": "COM221.1 - Computação Orientada a Objetos II (32h)"
+
+    },
+
+    {
+        "id": 3,
+        "sigla": "COM221.2",
+        "ementa":"Computação Orientada a Objetos II (Prática)",
+        "carga_horaria": "(32h)",
+        "full_name":"COM221.2 - Computação Orientada a Objetos II (Prática) (32h)"
+    },
+
+    {
+        "id": 4,
+        "sigla": "COM222.1",
+        "ementa": "Desenvolvimento de Sistemas na Web",
+        "carga_horaria": "(48h)",
+        "full_name": "COM222.1 - Desenvolvimento de Sistemas na Web (48h)"
+    },
+
+    {
+        "id": 5,
+        "sigla": "COM222.2",
+        "ementa": "Desenvolvimento de Sistemas na Web (Prática)",
+        "carga_horaria": "(32h)",
+        "full_name": "COM222.2 - Desenvolvimento de Sistemas na Web (Prática) (32h)"
+    },
+
+    {
+        "id": 6,
+        "sigla": "COM937",
+        "ementa": "Desenvolvimento de Jogos",
+        "carga_horaria": "(64h)",
+        "full_name": "COM937 - Desenvolvimento de Jogos (64h)"
+    },
+
+    {
+        "id": 7,
+        "sigla": "SIN260.1",
+        "ementa":"Sistemas Inteligentes",
+        "carga_horaria": "(48h)",
+        "full_name":"SIN260.1 - Sistemas Inteligentes (48h)"
+    },
+
+    {
+        "id": 8,
+        "sigla": "SIN260.2",
+        "ementa":"Sistemas Inteligentes (Prática)",
+        "carga_horaria": "(16h)",
+        "full_name":"SIN260.2 - Sistemas Inteligentes (Prática) (16h)"
+    },
+
+    {
+        "id": 9,
+        "sigla": "XDES03",
+        "ementa":"Programação Web",
+        "carga_horaria": "(64h)",
+        "full_name":"XDES03 - Programação Web (64h)"
+    }
+]
