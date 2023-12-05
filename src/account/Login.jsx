@@ -23,16 +23,19 @@ export default function Login() {
 
     const [errSenha, setErrSenha] = useState();
     const [errEmail, setErrEmail] = useState();
-    const [aut, setAut] =useState(false);
+    const [aut, setAut] = useState(false);
 
     const submitLogin = async (data) => {
         try {
             const response = await axios.post("http://localhost:3000/login", data);
 
             const token = response.data.token;
+            const users = response.data;
+       
+            sessionStorage.setItem('token', token);
+            sessionStorage.setItem('user', JSON.stringify(users));
 
             if (token) {
-                sessionStorage.setItem('token', token);
                 setAut(true);
             }
 

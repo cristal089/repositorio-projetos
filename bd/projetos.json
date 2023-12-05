@@ -2,15 +2,64 @@
     {
         "disciplina": "XDES03",
         "nome": "Site de receitas",
-        "descricao": "Site para encontrar e submeter receitas de todos os tipos",
-        "aluno": "Anna",
+        "descricao": "Site para encontrar e submeter receitas de todos os tipos.",
+        "grupo": "Anna e Silva",
         "nota": 10
     },
     {
         "disciplina": "XDES03",
         "nome": "Catálogo de filmes",
-        "descricao": "Site para encontrar e assistir filmes de todos os tipos",
-        "aluno": "Nina",
+        "descricao": "Site para encontrar e assistir filmes de todos os gêneros.",
+        "grupo": "Nina e Cristofer",
         "nota": 9.5
+    },
+    {
+        "disciplina": "COM222",
+        "nome": "Mostruário de calçados",
+        "descricao": "Site para comprar sapatos.",
+        "grupo": "John e Jonathan",
+        "nota": 7
+    },
+    {
+        "disciplina": "XDES03",
+        "nome": "Site de receitas",
+        "descricao": "Site para encontrar e submeter receitas de todos os tipos.",
+        "grupo": "Anna e Silva",
+        "nota": 10
+    },
+    {
+        "disciplina": "XDES03",
+        "nome": "Catálogo de filmes",
+        "descricao": "Site para encontrar e assistir filmes de todos os gêneros.",
+        "grupo": "Nina e Cristofer",
+        "nota": 9.5
+    },
+    {
+        "disciplina": "COM222",
+        "nome": "Mostruário de calçados",
+        "descricao": "Site para comprar sapatos.",
+        "grupo": "John e Jonathan",
+        "nota": 7
+    },
+    {
+        "disciplina": "XDES03",
+        "nome": "Site de receitas",
+        "descricao": "Site para encontrar e submeter receitas de todos os tipos.",
+        "grupo": "Anna e Silva",
+        "nota": 10
+    },
+    {
+        "disciplina": "XDES03",
+        "nome": "Catálogo de filmes",
+        "descricao": "Site para encontrar e assistir filmes de todos os gêneros.",
+        "grupo": "Nina e Cristofer",
+        "nota": 9.5
+    },
+    {
+        "disciplina": "COM222",
+        "nome": "Mostruário de calçados",
+        "descricao": "Site para comprar sapatos.",
+        "grupo": "John e Jonathan",
+        "nota": 7
     }
 ]

@@ -4,5 +4,11 @@
     "username": "Jaum",
     "email": "jaum@teste.com",
     "senha": "$2b$10$pmN6agfagIhD5gW4zOEAD.jL4hxSf1VzQSfkw9vEiTaa8YJz6w3W6"
+  },
+  {
+    "id": 2,
+    "username": "Nina",
+    "email": "nina@teste.com",
+    "senha": "$2b$10$RVqxV9I7cspQyC8/lpSOWOn2E2HlUpRRLd6xoNjluHRxKNZwmZ3nm"
   }
 ]

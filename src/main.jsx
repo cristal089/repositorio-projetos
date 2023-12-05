@@ -7,8 +7,10 @@ import './index.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 //Importando rotas
-import Lista from "./components/lista-projetos/Lista.jsx"
 import TelaAcc from './account/TelaAcc.jsx';
+import Lista from "./components/lista-projetos/Lista.jsx";
+import Dashboard from './components/dashboard-usuario/Dashboard.jsx';
+
 
 //Adicionando as rotas
 const router = createBrowserRouter([
@@ -17,7 +19,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [{
       path: '/',
-      element: <TelaAcc/>
+      element: <TelaAcc />
     }]
   },
   {
@@ -25,7 +27,8 @@ const router = createBrowserRouter([
     element: <Lista />
   },
   {
-    
+    path: ':grupo',
+    element: <Dashboard />
   }
 ]);
 

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
-import Projeto from "../projetos/Projeto"
+import Card from "../card/Card"
 import axios from 'axios';
 import { useForm } from "react-hook-form";
-
 import './Lista.css';
 
 export default function Lista() {
@@ -19,10 +18,16 @@ export default function Lista() {
         setFormData({...formData, ...data});
     }
 
+    const config = {
+        headers:{
+            'Authorization' : 'Bearer '.concat(sessionStorage.getItem('token'))
+        }
+    }
+
     useEffect(() => {
         async function valida(){
             try {
-                const resposta = await axios.get(`http://localhost:3000/projetos`);
+                const resposta = await axios.get(`http://localhost:3000/projetos`, config);
                 //console.log(resposta);
                 if(resposta.status === 200)
                     setValidado(true);
@@ -33,18 +38,27 @@ export default function Lista() {
         valida();
     }, []);
 
+    if(!validado){
+        return <p>Token Inválido</p>
+    }
+
+    //let usuario = JSON.parse(localStorage.getItem('user'));
+
     return (
-        <div>
-            <h2>Clique para listar os projetos</h2>
-            <form onSubmit={handleSubmit(submit)} noValidate>
-                <button>Listar</button>
-            </form>
-            <BuscaProjeto formData={formData}/>
-        </div>
+        <>
+            <nav>
+                
+            </nav>
+
+            <div className="page-list">
+                <h2 className="page-title">Todos os projetos</h2>
+                <BuscaProjeto formData={formData} config={config}/>
+            </div>
+        </>
     )
 }
 
-export function BuscaProjeto({formData}){
+export function BuscaProjeto({formData, config}){
 
     const [msg, setMsg] = useState('');
     const [projeto, setProjeto] = useState(<p>...</p>);
@@ -54,18 +68,20 @@ export function BuscaProjeto({formData}){
         const submit = async () => {
             let endPoint = 'http://localhost:3000/projetos';
             endPoint = `${endPoint}/${formData.sigla}`
+
             try{
-                const dados = await axios.get(`${endPoint}`);
+                const dados = await axios.get(`${endPoint}`, config);
                 if(Array.isArray(dados.data)){
                     for(let projeto of dados.data){
-                        view.push(<Projeto projeto={projeto} />);
+                        view.push(<Card projeto={projeto} />);
                     }
                 }else{
-                    view.push(<Projeto projeto={dados.data} />);
+                    view.push(<Card projeto={dados.data} />);
                 }
                 setProjeto(view);
                 setMsg('');
-            }catch(error){
+
+            } catch(error) {
                 setMsg(error.response.data);
                 setProjeto(<p></p>);
             }
