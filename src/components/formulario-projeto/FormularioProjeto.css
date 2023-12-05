@@ -35,10 +35,10 @@ h2 {
 #fundo-form input {
     width: 95%;
     padding: 8px;
-    margin-bottom: 15px;
     border: black solid 1px;
     border-radius: 15px;
     text-align: center;
+    margin: 0px 0px 15px 0px;
 }
 
 #fundo-form input:focus {
