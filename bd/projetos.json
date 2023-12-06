@@ -16,5 +16,23 @@
     "resumo": "Testando a criação de projeto",
     "periodo": "2021.1",
     "disciplina": "COM221.2"
+  },
+  {
+    "id": 3,
+    "repositorio": "https://github.com/cristal089/repositorio-projetos/commits/main",
+    "grupo": "2",
+    "matriculas": "20021546456",
+    "resumo": "Projeto 2",
+    "periodo": "2025.2",
+    "disciplina": "SIN260.1"
+  },
+  {
+    "id": 4,
+    "repositorio": "https://github.com/cristal089/repositorio-projetos/commits/main",
+    "grupo": "7",
+    "matriculas": "20021546456",
+    "resumo": "Teste para apresentação",
+    "periodo": "2023.2",
+    "disciplina": "XDES03"
   }
 ]

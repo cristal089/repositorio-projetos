@@ -19,8 +19,7 @@ const FormularioProjeto = ({isEditing}) => {
     });
 
     //Para mensagem de Feedback
-    const [feedback, setFeedback] = useState({
-    });
+    const [feedback, setFeedback] = useState('');
 
     const handleInputChange = (e) => {
         const {name, value} = e.target;
@@ -66,7 +65,7 @@ const FormularioProjeto = ({isEditing}) => {
         try {
             let response;
             if (isEditing) { // <FormularioProjeto isEditing={true}/>
-              response = await axios.put("http://localhost:3000/projetos/", config, projectData, {
+              response = await axios.put("http://localhost:3000/projetos/", projectData, {
                     repositorio: projectData.repositorio,
                     grupo: projectData.grupo,
                     matriculas: projectData.matriculas,
@@ -79,7 +78,7 @@ const FormularioProjeto = ({isEditing}) => {
                     },
                    });
             } else { // <FormularioProjeto isEditing={false}/>
-                response = await axios.post("http://localhost:3000/projetos", config, {
+                response = await axios.post("http://localhost:3000/projetos", projectData, {
                     repositorio: projectData.repositorio,
                     grupo: projectData.grupo,
                     matriculas: projectData.matriculas,
