@@ -32,6 +32,12 @@ const FormularioProjeto = ({isEditing}) => {
         return regexObj.test(projectData.repositorio);
     });
 
+    const config = {
+      headers:{
+          'Authorization' : 'Bearer '.concat(sessionStorage.getItem('token'))
+      }
+    }
+
     const handleSubmit = async (e) => {
       e.preventDefault();
         //Verificando se algum dos dados não foi inserido.
@@ -46,7 +52,7 @@ const FormularioProjeto = ({isEditing}) => {
         try {
             let response;
             if (isEditing) { // <FormularioProjeto isEditing={true}/>
-              response = await axios.put("http://localhost:3000/projetos/", projectData, {
+              response = await axios.put("http://localhost:3000/projetos/", config, projectData, {
                     repositorio: projectData.repositorio,
                     grupo: projectData.grupo,
                     matriculas: projectData.matriculas,
@@ -59,7 +65,7 @@ const FormularioProjeto = ({isEditing}) => {
                     },
                    });
             } else { // <FormularioProjeto isEditing={false}/>
-                response = await axios.post("http://localhost:3000/projetos", {
+                response = await axios.post("http://localhost:3000/projetos", config, {
                     repositorio: projectData.repositorio,
                     grupo: projectData.grupo,
                     matriculas: projectData.matriculas,
