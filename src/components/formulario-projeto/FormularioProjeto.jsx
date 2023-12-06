@@ -78,7 +78,7 @@ const FormularioProjeto = ({isEditing}) => {
                     },
                    });
             } else { // <FormularioProjeto isEditing={false}/>
-                response = await axios.post("http://localhost:3000/projetos", {
+                response = await axios.post("http://localhost:3000/projetos", config, {
                     repositorio: projectData.repositorio,
                     grupo: projectData.grupo,
                     matriculas: projectData.matriculas,
