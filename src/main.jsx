@@ -32,11 +32,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/projetos/:id',
-    element: <></>
+    element: <><FormularioProjeto isEditing={true} /></>
   },
   {
     path: '/formulario',
-    element: <FormularioProjeto />
+    element: <FormularioProjeto isEditing={false} />
   }
 ]);
 
