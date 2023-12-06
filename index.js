@@ -89,25 +89,22 @@ app.get('/projetos', verificaToken, (req,res) => {
     return res.json(projetos);
 });
 
-app.get('/:grupo', verificaToken, (req,res) => {
+app.post('/projetos/:id', verificaToken, (req,res) => {
 
   
     //Abre o bd (aqui estamos simulando com arquivo) com as disciplinas
     //__dirname é o diretorio corrente onde esse arquivo esta executando
     const projectsPath = path.join(__dirname, 'bd', 'projetos.json');
-    const usersPath = path.join(__dirname, 'bd', 'projetos.json');
-
     const projectsDB = JSON.parse(fs.readFileSync(projectsPath, { encoding: 'utf8', flag: 'r' }));
-    const usersDB = JSON.parse(fs.readFileSync(usersPath, { encoding: 'utf8', flag: 'r' }));
     
     const params = req.params;
     //buscar a disciplina
-    for(let projeto of projetos){
-        if(params.grupo.toUpperCase()===projeto.grupo.toUpperCase()){
+    for(let projeto of projectsDB){
+        if(params.id === projeto.id){
             return res.json(projeto);
         }
     }
-    return res.status(403).send(`Grupo Não Encontrado!`);
+    return res.status(403).send(`Projeto Não Encontrado!`);
 
 });
 

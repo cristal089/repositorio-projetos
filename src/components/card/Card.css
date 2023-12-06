@@ -56,12 +56,6 @@
     color: #886cff;
 }
 
-.student:hover {
-    text-decoration: underline;
-    color: #f3f0ff;
-    cursor: pointer;
-}
-
 .review {
     display: flex;
     flex-direction: row;

@@ -46,7 +46,7 @@ const FormularioProjeto = ({isEditing}) => {
         try {
             let response;
             if (isEditing) { // <FormularioProjeto isEditing={true}/>
-                response = await axios.put("http://localhost:3000/projetos", projectData, { //Arrumar esse id, para identificar qual o projeto que está sendo editado
+                response = await axios.put("http://localhost:3000/projetos/:id", projectData, { //Arrumar esse id, para identificar qual o projeto que está sendo editado
                     repositorio: projectData.repositorio,
                     grupo: projectData.grupo,
                     matriculas: projectData.matriculas,

@@ -31,6 +31,10 @@ const router = createBrowserRouter([
     element: <Dashboard />
   },
   {
+    path: '/projetos/:id',
+    element: <></>
+  },
+  {
     path: '/formulario',
     element: <FormularioProjeto />
   }

@@ -5,14 +5,14 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 export default function Card({projeto}) {
 
     return (
-        <a className="card" href='http://localhost:5173/projetos/:projeto'>
+        <a className="card" href={`http://localhost:5173/projetos/${projeto.id}`}>
             <span className='subject'>{projeto.disciplina}</span>
 
             <div className="info">
                 <span className='title'>{projeto.repositorio}</span>
                 <div className='smallerText'>
                     <span>{projeto.resumo}</span>
-                    <a className='student' href={`http://localhost:5173/${projeto.grupo}`}>Grupo {projeto.grupo}</a>
+                    <span className='student' href={`http://localhost:5173/${projeto.grupo}`}>Grupo {projeto.grupo}</span>
                 </div>
             </div>
 
