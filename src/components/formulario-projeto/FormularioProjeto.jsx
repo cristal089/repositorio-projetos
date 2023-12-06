@@ -38,6 +38,19 @@ const FormularioProjeto = ({isEditing}) => {
       }
   }
 
+  const handleDelete = async () => {
+    try {
+       const response = await axios.delete(`http://localhost:3000/projetos/:id`, config);
+       if (response.status === 200) {
+          console.log("Projeto excluído com sucesso");
+       } else {
+          setFeedback("Não foi possível excluir o projeto");
+       }
+    } catch (error) {
+       setFeedback(`Ocorreu um erro ao excluir o projeto: ${error}`);
+    }
+ };
+
     const handleSubmit = async (e) => {
       e.preventDefault();
         //Verificando se algum dos dados não foi inserido.
@@ -259,14 +272,20 @@ const FormularioProjeto = ({isEditing}) => {
               </button>
             </div>
           ))}
-          
             <button type="button" onClick={handleAddField}>
               Adicionar Nota
             </button>
           
           <p>Nota Final {calculaNotaFinal()}</p>
           {feedback && <div id="feedback">{feedback}</div>}
-                    <button type="submit">{isEditing ? "Salvar Edição" : "Criar Projeto"}</button> 
+
+          <div id="buttons">
+            {isEditing && (
+              <button type="button" onClick={handleDelete}>Excluir Projeto</button>
+            )}
+              <button type="submit">{isEditing ? "Salvar Edição" : "Criar Projeto"}</button> 
+            </div>
+
                 </form>
             </div>  
         </>

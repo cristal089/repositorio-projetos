@@ -89,7 +89,7 @@ app.get('/projetos', verificaToken, (req,res) => {
     return res.json(projetos);
 });
 
-app.put(`/projetos/`, verificaToken, (req, res) => {
+app.put(`/projetos/:id`, verificaToken, (req, res) => {
     const id = Number(req.params.id);
     const { repositorio, grupo, matriculas, resumo, periodo, disciplina } = req.body;
     // Lê o arquivo JSON e atualiza o projeto com o ID correspondente
@@ -160,6 +160,23 @@ app.post("/projetos", async (req, res) => {
     projectsDB.push(project);
     fs.writeFileSync(projectsPath, JSON.stringify(projectsDB, null, 2));
     res.send(`Projeto criado com sucesso.`);
+});
+
+app.delete('/projetos/:id', verificaToken, (req, res) => {
+    const id = Number(req.params.id);
+    const projectsPath = path.join(__dirname, 'bd', 'projetos.json');
+    const projectsDB = JSON.parse(fs.readFileSync(projectsPath, { encoding: 'utf8', flag: 'r' }));
+
+    const index = projectsDB.findIndex(projeto => projeto.id === id);
+
+    if (index !== -1) {
+        projectsDB.splice(index, 1);
+
+        fs.writeFileSync(projectsPath, JSON.stringify(projectsDB, null, 2));
+        return res.json({ message: 'Projeto excluído com sucesso' });
+    } else {
+        return res.status(404).json({ message: 'Projeto não encontrado' });
+    }
 });
 
 // Função Autenticadora
