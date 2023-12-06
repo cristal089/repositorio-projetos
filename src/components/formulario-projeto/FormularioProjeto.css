@@ -11,13 +11,16 @@ h2 {
 #feedback {
     color: white;
     background-color: #e74c3c;
-    margin-top: 10px;
+    margin: 0 auto;
     border-radius: 5px;
-    width: 90%;
-    margin: 20px auto;
+    width: 100%;
+    max-width: 533px;
+    word-wrap: break-word;
     border: black solid 1px;
     text-align: center;
     padding: 8px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 #fundo-form {
@@ -32,13 +35,15 @@ h2 {
     margin-bottom: 10px;
 }
   
-#fundo-form input {
-    width: 95%;
+#fundo-form input,
+#fundo-form select {
+    box-sizing: border-box;
+    width: 100%;
     padding: 8px;
+    margin-bottom: 15px;
     border: black solid 1px;
     border-radius: 15px;
     text-align: center;
-    margin: 0px 0px 15px 0px;
 }
 
 #fundo-form input:focus {
@@ -49,15 +54,6 @@ h2 {
 #fundo-form select:focus{
     outline: none;
     box-shadow: 0 0 30px rgb(140,127,212);
-}
-
-#fundo-form select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: black solid 1px;
-    border-radius: 15px;
-    text-align: center;
 }
   
 #fundo-form h3 {
@@ -74,6 +70,7 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
     margin: 0 auto;
+    margin-top: 20px;
 }
   
 #fundo-form button:hover {
