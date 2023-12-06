@@ -19,7 +19,8 @@ const FormularioProjeto = ({isEditing}) => {
     });
 
     //Para mensagem de Feedback
-    const [feedback, setFeedback] = useState("");
+    const [feedback, setFeedback] = useState({
+    });
 
     const handleInputChange = (e) => {
         const {name, value} = e.target;
@@ -42,7 +43,7 @@ const FormularioProjeto = ({isEditing}) => {
     try {
        const response = await axios.delete(`http://localhost:3000/projetos/:id`, config);
        if (response.status === 200) {
-          console.log("Projeto excluído com sucesso");
+          setFeedback("Projeto excluído com sucesso");
        } else {
           setFeedback("Não foi possível excluir o projeto");
        }
@@ -58,7 +59,7 @@ const FormularioProjeto = ({isEditing}) => {
         setFeedback("Por favor, preencha todos os campos.");
         return;
       } else if (!repositorioValido){ //Validando o Link do Repositório
-          setFeedback("Por favor, insira um repositório válido");
+          setFeedback("Por favor, insira um repositório válido", error);
           return;
         }
     
@@ -91,8 +92,8 @@ const FormularioProjeto = ({isEditing}) => {
                         },
                     });
             }
-          if (response.status === 200) {//Feedback "desnecessário", por isso console.log
-            console.log(isEditing ? "Projeto editado com sucesso": "Projeto criado com sucesso", projectData);
+          if (response.status === 200) {
+            setFeedback(isEditing ? "Projeto editado com sucesso": "Projeto criado com sucesso", projectData);
           } else {
                 setFeedback(`Não foi possível ${isEditing ? "editar" : "criar"} o projeto`);
             }
