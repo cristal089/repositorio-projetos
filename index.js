@@ -89,7 +89,7 @@ app.get('/projetos', verificaToken, (req,res) => {
     return res.json(projetos);
 });
 
-app.put(`/projetos/:id`, verificaToken, (req, res) => {
+app.put(`/projetos`, verificaToken, (req, res) => {
     const id = Number(req.params.id);
     const { repositorio, grupo, matriculas, resumo, periodo, disciplina } = req.body;
     // Lê o arquivo JSON e atualiza o projeto com o ID correspondente
