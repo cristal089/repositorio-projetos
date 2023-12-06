@@ -138,7 +138,6 @@ const FormularioProjeto = ({isEditing}) => {
         <>
             <div id="fundo-form">
                 <h2>{isEditing ? "Editar Projeto" : "Criar Projeto"}</h2>
-                {feedback && <div id="feedback">{feedback}</div>}
                 <form onSubmit={handleSubmit}>
                     <label>Repositório
                         <input 
@@ -209,10 +208,11 @@ const FormularioProjeto = ({isEditing}) => {
                     </label>
                     <h3>Avaliações</h3>
           {projectData.avaliacoes.map((field, index) => (
-            <div key={index}>
-              <label>
+            <div className="avaliacao-container" key={index}>
+              <label className="avaliacao-label">
                 Feito
                 <input
+                  className="avaliacao-input"
                   type="text"
                   value={field.label}
                   onChange={(e) =>
@@ -220,9 +220,10 @@ const FormularioProjeto = ({isEditing}) => {
                   }
                 />
               </label>
-              <label>
+              <label className="avaliacao-label nota">
                 Nota
                 <input
+                  className="avaliacao-input"
                   type="number"
                   step="0.01"
                   min="0"
@@ -233,8 +234,9 @@ const FormularioProjeto = ({isEditing}) => {
                   }
                 />
               </label>
-              <label>
+              <label className="avaliacao-label inline">
                 <input
+                  className="avaliacao-input"
                   type="checkbox"
                   checked={field.validado}
                   onChange={(e) =>
@@ -243,8 +245,9 @@ const FormularioProjeto = ({isEditing}) => {
                 />
               </label>
               <button
+                className="avaliacao-button"
                 type="button"
-                onClick={() => handleRemoveField(index)}
+                onClick={() => handleRemoveField(index) && setFeedback('')}
               >
                Remover
               </button>
@@ -256,6 +259,7 @@ const FormularioProjeto = ({isEditing}) => {
             </button>
           
           <p>Nota Final {calculaNotaFinal()}</p>
+          {feedback && <div id="feedback">{feedback}</div>}
                     <button type="submit">{isEditing ? "Salvar Edição" : "Criar Projeto"}</button> 
                 </form>
             </div>  

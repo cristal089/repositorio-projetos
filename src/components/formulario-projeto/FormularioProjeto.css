@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 
-*{
+* {
   font-family: 'Comfortaa', sans-serif;
 }
 
@@ -12,7 +12,12 @@ h2 {
     color: white;
     background-color: #e74c3c;
     margin-top: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
+    width: 90%;
+    margin: 20px auto;
+    border: black solid 1px;
+    text-align: center;
+    padding: 8px;
 }
 
 #fundo-form {
@@ -28,12 +33,12 @@ h2 {
 }
   
 #fundo-form input {
-    width: 90%;
+    width: 95%;
     padding: 8px;
-    margin-bottom: 15px;
     border: black solid 1px;
     border-radius: 15px;
     text-align: center;
+    margin: 0px 0px 15px 0px;
 }
 
 #fundo-form input:focus {
@@ -47,7 +52,7 @@ h2 {
 }
 
 #fundo-form select {
-    width: 95%;
+    width: 100%;
     padding: 8px;
     margin-bottom: 15px;
     border: black solid 1px;
@@ -75,4 +80,49 @@ h2 {
     background-color: rgb(140,127,212);
 }
 
-  
+h3 {
+    text-align: center;
+}
+
+#fundo-form .avaliacao-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#fundo-form .avaliacao-label {
+    width: 100%; /* Ajuste a largura conforme necessário */
+}
+
+#fundo-form .avaliacao-input {
+    flex-grow: 0;
+    width: 88%;
+    padding: 8px;
+    border: black solid 1px;
+    border-radius: 15px;
+}
+
+#fundo-form .avaliacao-label.nota{
+ width: 40%;
+}
+
+#fundo-form .avaliacao-input[type="number"] {
+    width: 70%;
+}
+
+#fundo-form .avaliacao-label.inline{
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+#fundo-form .avaliacao-input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    margin: 0px 4px 0px 1px;
+}
+
+#fundo-form .avaliacao-button {
+    width: 70%;
+}
