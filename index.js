@@ -89,23 +89,31 @@ app.get('/projetos', verificaToken, (req,res) => {
     return res.json(projetos);
 });
 
-app.post('/projetos/:id', verificaToken, (req,res) => {
-
-  
-    //Abre o bd (aqui estamos simulando com arquivo) com as disciplinas
-    //__dirname é o diretorio corrente onde esse arquivo esta executando
+app.put(`/projetos/`, verificaToken, (req, res) => {
+    const id = Number(req.params.id);
+    const { repositorio, grupo, matriculas, resumo, periodo, disciplina } = req.body;
+    // Lê o arquivo JSON e atualiza o projeto com o ID correspondente
     const projectsPath = path.join(__dirname, 'bd', 'projetos.json');
     const projectsDB = JSON.parse(fs.readFileSync(projectsPath, { encoding: 'utf8', flag: 'r' }));
-    
-    const params = req.params;
-    //buscar a disciplina
-    for(let projeto of projectsDB){
-        if(params.id === projeto.id){
-            return res.json(projeto);
-        }
-    }
-    return res.status(403).send(`Projeto Não Encontrado!`);
 
+    const index = projectsDB.findIndex(projeto => projeto.id === Number(id));
+
+    if (index !== -1) {
+        projectsDB[index] = {
+            id: Number(id),
+            repositorio,
+            grupo,
+            matriculas,
+            resumo,
+            periodo,
+            disciplina
+        };
+
+        fs.writeFileSync(projectsPath, JSON.stringify(projectsDB, null, 2));
+        return res.json({ message: 'Projeto editado com sucesso' });
+    } else {
+        return res.status(404).json({ message: 'Projeto não encontrado' });
+    }
 });
 
 app.get('/:usuario', verificaToken, (req,res) => {
